@@ -2,12 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
+import dayjs from 'dayjs'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { applyMiddleware, createStore } from 'redux'
 import { createBrowserHistory } from 'history'
 import { routerMiddleware } from 'connected-react-router'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { normalize } from 'styled-normalize'
+import buddhistEra from 'dayjs/plugin/buddhistEra'
 import KrungsriBold from './assets/fonts/krungsri_con_bol-webfont.ttf'
 import KrungsriMedium from './assets/fonts/krungsri_con_med-webfont.ttf'
 import KrungsriNormal from './assets/fonts/krungsri_con-webfont.ttf'
@@ -19,6 +21,8 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './i18n'
+
+dayjs.extend(buddhistEra)
 
 export const GlobalStyle = createGlobalStyle`
   body {
