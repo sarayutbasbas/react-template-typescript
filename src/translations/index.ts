@@ -3,11 +3,11 @@ import translationEn from './en/translation'
 
 const translations = {
   en: {
-    translation: translationEn
+    translation: translationEn,
   },
   th: {
-    translation: translationTh
-  }
+    translation: translationTh,
+  },
 }
 
 export default translations

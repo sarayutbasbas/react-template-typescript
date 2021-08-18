@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { State } from '../types/state'
@@ -12,7 +14,7 @@ const Home = () => {
 
 	return (
     <div>
-		  <div>Current Path is : {currentPath} - {t('header.name')}</div>
+      Current Path is : {currentPath} - {t('header.name')}
       <button onClick={handleClick}>Click here</button>
     </div>
 	)
